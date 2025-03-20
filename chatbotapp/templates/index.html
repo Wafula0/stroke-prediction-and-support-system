@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stroke Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; padding: 20px; }
+        #chatbox { width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .message { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .user { background-color: #d1e7dd; text-align: right; }
+        .bot { background-color: #f8d7da; text-align: left; }
+        #input-box { width: calc(100% - 22px); padding: 10px; margin-top: 10px; }
+        #send-button { padding: 10px 20px; background-color: #0d6efd; color: white; border: none; cursor: pointer; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div id="chatbox">
+        <h2>Stroke Chatbot (Tstroke)</h2>
+        <div id="messages"></div>
+        <input type="text" id="input-box" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div>
+
+    <script>
+        document.getElementById('send-button').onclick = function() {
+            const userMessage = document.getElementById('input-box').value;
+            displayMessage(userMessage, 'user');
+            fetch(`/get_response/?message=${userMessage}`)
+                .then(response => response.json())
+                .then(data => {
+                    displayMessage(data.response, 'bot');
+                });
+            document.getElementById('input-box').value = '';
+        };
+
+        function displayMessage(message, sender) {
+            const messageContainer = document.createElement('div');
+            messageContainer.className = `message ${sender}`;
+            messageContainer.textContent = message;
+            document.getElementById('messages').appendChild(messageContainer);
+        }
+    </script>
+</body>

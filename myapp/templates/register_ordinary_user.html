@@ -1,0 +1,131 @@
+
+</form><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        h5 {
+            color: red;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .container input[type="text"], 
+        .container input[type="number"], 
+        .container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .container .form-group {
+            margin-bottom: 20px;
+        }
+
+        .container input[type="text"]:focus, 
+        .container input[type="number"]:focus, 
+        .container input[type="password"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sign Up Below</h1> 
+    
+    <div class="container">
+        {% for message in messages %}
+            <h5>{{ message }}</h5>
+        {% endfor %}
+
+        <form action="register_ordinary_user" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <p>Username:</p>
+                <input type="text" name="username" placeholder="Enter your username">
+            </div>
+
+            <div class="form-group">
+                <p>Email:</p>
+                <input type="text" name="email" placeholder="Enter your email address">
+            </div>
+
+            <div class="form-group">
+                <p>Country:</p>
+                <input type="text" name="country" placeholder="Enter your country">
+            </div>
+
+            <div class="form-group">
+                <p>License Number:</p>
+                <input type="number" name="licensenumber" placeholder="Enter your license number">
+            </div>
+
+            <div class="form-group">
+                <p>Password:</p>
+                <input type="password" name="password" placeholder="Create a password">
+            </div>
+
+            <div class="form-group">
+                <p>Confirm Password:</p>
+                <input type="password" name="password2" placeholder="Confirm your password">
+            </div>
+               <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+</body>
+</html>
+

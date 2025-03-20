@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Your Health System</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.user-greeting p {
+    font-size: 16px;
+}
+
+/* Main Content */
+main {
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.option {
+    margin: 20px;
+}
+
+.option-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content p {
+    font-size: 14px;
+}
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Stroke Prediction and Support system</div>
+            <div class="user-greeting">
+                <p>Welcome, {{user.username}}!</p> <!-- You can dynamically insert the username here -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>What would you like to do today?</h1>
+            <div class="options"><div class="option">
+                    <a href="{%url 'cbt'%}">
+                        <button class="option-btn">Charting with Chatbot</button>
+                    </a>
+                </div>
+                <div class="option">
+                    <a href="{%url 'predict'%}">
+                        <button class="option-btn">Predict Likelihood of Stroke</button>
+                    </a>
+                </div>
+                <div class="chat.html">
+                    <a href="{%url 'home'%}">
+                        <button class="option-btn">Chat in Group Application</button>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Stroke Prediction and Support System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

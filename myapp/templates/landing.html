@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container a {
+            display: block;
+            text-align: center;
+            background-color: #008CBA;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            width: 250px;
+            transition: background-color 0.3s ease;
+        }
+
+        .container a:hover {
+            background-color: #005f6b;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Health Prediction System</h1>
+    </header>
+
+    <div class="container">
+        <p>Please choose an option to proceed:</p>
+
+        <a href="{% url 'register_doctor' %}">Register as Doctor</a>
+        <a href="{% url 'register_ordinary_user' %}">Register as Ordinary User</a>
+        <a href="{% url 'login_doctor' %}">Login as Doctor</a>
+        <a href="{% url 'login_ordinary_user' %}">Login as Ordinary User</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Health Prediction System | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

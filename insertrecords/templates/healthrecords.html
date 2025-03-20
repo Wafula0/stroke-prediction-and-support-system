@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom:200px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form p {
+            font-size: 1rem;
+           color: #333;
+            margin: 10px 0;
+        }
+
+        .form input[type="text"],
+        .form input[type="number"],
+        .form input[type="radio"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .form label {
+            font-size: 1rem;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .form .radio-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form .radio-group label {
+            margin-right: 20px;
+        }
+
+        .form .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .form input[type="number"] {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Insert Health Records</h1>
+        </div>
+        <div class="form">
+            <form action="insertRecords" method="POST">
+                {% csrf_token %}
+                <h1>Insert here:</h1>
+                <p>Gender:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="1"> Male</label>
+                    <label><input type="radio" name="gender" value="0"> Female</label>
+                    <label><input type="radio" name="gender" value="2"> Others</label>
+                </div>
+
+                <p>Age:</p>
+                <input type="number" name="age" placeholder="Enter your age">
+
+                <p>Hypertension:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="hypertension" value="1"> Yes</label>
+                    <label><input type="radio" name="hypertension" value="0"> No</label>
+                </div>
+
+                <p>Heart Disease:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="heart_disease" value="1"> Yes</label>
+                    <label><input type="radio" name="heart_disease" value="0"> No</label>
+                </div>
+
+                <p>Ever Married:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="ever_married" value="1"> Yes</label>
+                    <label><input type="radio" name="ever_married" value="0"> No</label>
+                </div>
+
+                <p>Work Type:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="work_type" value="2"> Private</label>
+                    <label><input type="radio" name="work_type" value="3"> Self Employed</label>
+                    <label><input type="radio" name="work_type" value="0"> Government Job</label>
+                    <label><input type="radio" name="work_type" value="4"> Children</label>
+                    <label><input type="radio" name="work_type" value="1"> Never Worked</label>
+                </div>
+
+                <p>Residence Type:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="Residence_type" value="1"> Rural</label>
+                    <label><input type="radio" name="Residence_type" value="0"> Urban</label>
+                </div>
+
+                <p>Glucose Level:</p>
+                <input type="number" name="avg_glucose_level" placeholder="Enter glucose level" step="any">
+
+                <p>BMI:</p>
+                <input type="number" name="bmi" placeholder="Enter BMI" step="any">
+
+                <p>Smoking Status:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="smoking_status" value="1"> Formerly Smoked</label>
+                    <label><input type="radio" name="smoking_status" value="2"> Never Smoked</label>
+                    <label><input type="radio" name="smoking_status" value="0"> Unknown</label>
+                    <label><input type="radio" name="smoking_status" value="3"> Smoker</label>
+                </div>
+
+                <p>Stroke Status:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="stroke_status" value="1"> Yes</label>
+                    <label><input type="radio" name="stroke_status" value="0"> No</label>
+                </div>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

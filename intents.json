@@ -1,0 +1,139 @@
+{ "intents":[
+    {
+        "tag": "greetings",
+        "patterns": ["hi there", "how are you", "hey", "hello", "is anyone there", "how are you doing","hi"],
+        "responses": ["Hello, I am Tstroke, a chatbot. I address all issues regarding stroke. How can I help you?", "Good to see you! I am Tstroke, a chatbot. I address all issues regarding stroke. How can I assist you?"],
+        "context": [""]
+    },
+    {
+        "tag": "questions",
+        "patterns": ["what is stroke", "stroke", "what do you teach", "tell me about stroke", "I want to know more about stroke"],
+        "responses": ["A stroke is an episode of rapid-onset neurological dysfunction resulting from injury to the brain, spinal cord, or retina (CNS) that is caused by interruption of blood flow leading to focal infarction, or by bleeding into or around the brain, leading to potential brain damage, disability, or even death."],
+        "context": [""]
+    },
+    {
+        "tag": "types",
+        "patterns": ["types of stroke", "types", "what are the types of stroke"],
+        "responses": ["There are three main types of stroke:\n1. **Ischemic stroke** - Caused by blocked arteries.\n2. **Hemorrhagic stroke** - Caused by bleeding in the brain.\n3. **Transient Ischemic Attack (TIA)** - A temporary stroke warning sign."],
+        "context": [""]
+    },
+    {
+        "tag":"Ischemic stroke",
+        "patterns":["what is ischemic stroke","ischemic stroke"],
+        "responses":["This is the most common type of stroke ,accounting for about 87% of all strokes. It occurs when a blood clot blocks or narrows an artery leading to the brain restricting blood flow. Causes include blood clot formed in the heart or other blood vessels (thrombotic or embotic stroke)."],
+        "context":[""]
+    },
+    {
+        "tag":"hemorrhagic stroke",
+        "patterns":["what is hemorrhagic stroke","hemorrhagic stroke"],
+        "responses":["This type happens when a blood vessel in the brain bursts, leading to bleeding in or around the brain. Causes include high blood pressure, aneurysms, and blood vessel malformations."],
+        "context":[""]
+    },
+    {
+        "tag":"TIA",
+        "patterns":["what is Transient Ischemic Attack","Transient Ischemic attack","TIA","what is TIA"],
+        "responses":["Often called 'mini-stroke', TIA is a temporary blockage of blood flow to the brain. It causes stroke-like symptoms but doesnt result in permanent damage. It is a warning sign of a possible major stroke."],
+        "context":[""]
+    },
+    {
+        "tag": "symptoms",
+        "patterns": ["what are the symptoms of stroke", "how do I know if someone is having a stroke", "stroke symptoms"],
+        "responses": ["Symptoms include:\n- Sudden numbness or weakness (especially on one side of the body)\n- Trouble speaking or understanding speech\n- Sudden vision problems\n- Severe headache with no known cause"],
+        "context": [""]
+    },
+    {
+        "tag": "risk_factors",
+        "patterns": ["what are the risk factors for stroke", "who is at risk of stroke", "stroke risk factors"],
+        "responses": ["Risk factors include high blood pressure, diabetes, heart disease, smoking, obesity, high cholesterol, and lack of physical activity."],
+        "context": [""]
+    },
+    {
+        "tag": "diagnosis",
+        "patterns": ["how is stroke diagnosed", "stroke diagnosis", "tests for stroke"],
+        "responses": ["Diagnosis includes:\n- **CT Scan or MRI** to check for brain damage\n- **Blood tests** to check for clotting issues\n- **Carotid ultrasound** to see artery blockages"],
+        "context": [""]
+    },
+    {
+        "tag": "prevention",
+        "patterns": ["how can I prevent stroke", "stroke prevention", "ways to avoid stroke"],
+        "responses": ["Ways to prevent stroke:\n- Control blood pressure\n- Eat a healthy diet\n- Exercise regularly\n- Avoid smoking and excessive alcohol"],
+        "context": [""]
+    },
+    {
+        "tag": "treatment",
+        "patterns": ["how is stroke treated", "stroke treatment", "what are the treatments for stroke"],
+        "responses": ["Treatment depends on the type:\n- **Ischemic stroke**: Clot-busting drugs or mechanical clot removal\n- **Hemorrhagic stroke**: Surgery or controlling bleeding"],
+        "context": [""]
+    },
+    {
+        "tag": "recovery",
+        "patterns": ["how long does it take to recover from stroke", "stroke recovery time", "can someone fully recover from stroke"],
+        "responses": ["Recovery time varies. Some recover in weeks, others take months or years. Rehabilitation therapies like physical, speech, and occupational therapy help."],
+        "context": [""]
+    },
+    {
+        "tag": "first_aid",
+        "patterns": ["what to do if someone is having a stroke", "first aid for stroke", "how can I help someone having a stroke"],
+        "responses": ["Act FAST:\n- **F**ace drooping?\n- **A**rm weakness?\n- **S**peech difficulty?\n- **T**ime to call emergency services immediately!"],
+        "context": [""]
+    },
+    {
+        "tag": "diet",
+        "patterns": ["what should a stroke patient eat", "diet for stroke recovery", "best foods for stroke patients"],
+        "responses": ["A healthy diet includes:\n- Leafy greens and vegetables\n- Fruits rich in antioxidants\n- Whole grains\n- Lean proteins like fish and chicken\n- Avoiding salt, sugar, and unhealthy fats"],
+        "context": [""]
+    },
+    {
+        "tag": "emotional_effects",
+        "patterns": ["does stroke affect emotions", "can stroke cause depression", "mental effects of stroke"],
+        "responses": ["Yes, stroke can cause emotional changes such as depression, anxiety, mood swings, and personality changes."],
+        "context": [""]
+    },
+    {
+        "tag": "exercise",
+        "patterns": ["is exercise good after stroke", "best exercises for stroke patients"],
+        "responses": ["Exercise helps in recovery. Good options include:\n- Walking and balance exercises\n- Strength training\n- Stretching to improve flexibility"],
+        "context": [""]
+    },
+    {
+        "tag": "medication",
+        "patterns": ["what medicines are given after stroke", "medication for stroke recovery"],
+        "responses": ["Common stroke medications include:\n- Blood thinners (e.g., aspirin, warfarin)\n- Blood pressure medications\n- Cholesterol-lowering drugs (e.g., statins)"],
+        "context": [""]
+    },
+    {
+        "tag": "alternative_treatments",
+        "patterns": ["are there alternative treatments for stroke", "natural remedies for stroke"],
+        "responses": ["Some complementary treatments include:\n- Acupuncture\n- Herbal supplements (under doctor’s guidance)\n- Yoga and meditation"],
+        "context": [""]
+    },
+    {
+        "tag": "support_groups",
+        "patterns": ["where can stroke survivors find support", "stroke support groups"],
+        "responses": ["Stroke survivors can find support in:\n- Online stroke survivor communities\n- Local rehabilitation centers\n- Hospitals offering stroke recovery programs"],
+        "context": [""]
+    },
+    {
+        "tag": "stroke_in_young_people",
+        "patterns": ["can young people get a stroke", "stroke in young adults", "can children have strokes"],
+        "responses": ["Yes, while strokes are more common in older adults, young people and even children can have strokes due to genetic conditions, heart defects, or clotting disorders."],
+        "context": [""]
+    },
+    {
+        "tag": "stroke_myths",
+        "patterns": ["common myths about stroke", "stroke misconceptions"],
+        "responses": ["Here are some common myths about stroke:\n- **Myth**: Only old people get strokes. **Truth**: Strokes can happen at any age.\n- **Myth**: Strokes aren't preventable. **Truth**: Many strokes can be prevented with lifestyle changes."],
+        "context": [""]
+    },
+    {
+        "tag": "stroke_awareness",
+        "patterns": ["how can we raise stroke awareness", "stroke awareness campaigns"],
+        "responses": ["You can raise awareness by:\n- Educating others about stroke symptoms\n- Participating in stroke awareness walks\n- Sharing information on social media"],
+        "context": [""]
+    }
+]
+}
+    
+
+    
+

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-container h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-container input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-container input[type="number"],
+        .form-container input[type="text"],
+        .form-container input[type="email"] {
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-container label {
+            font-size: 16px;
+            margin-right: 20px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            background-color :0.3s;
+            margin-top: 20px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-container input[type="radio"]:checked {
+            background-color: #4CAF50;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .form-container h1 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container h1 {
+                font-size: 20px;
+            }
+
+            .form-container input[type="number"],
+            .form-container input[type="submit"] {
+                font-size: 16px;
+            }
+
+            .form-container label {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Enter Your Details</h1>
+        <form action="results" method="post">
+            {% csrf_token %}
+            
+            <!-- Gender Section -->
+            <p>Gender:</p>
+            <label>
+                <input type="radio" name="gender" value="1" required> Male
+            </label>
+            <label>
+                 <input type="radio" name="gender" value="0" required> Female
+            </label>
+            <label>
+                <input type="radio" name="gender" value="2" required> Others
+            </label>
+            <br><br>
+
+            <!-- Age Section -->
+            <p>Age:</p>
+            <input type="number" name="age" required placeholder="Enter your age">
+            <br><br>
+
+            <!-- Hypertension Section -->
+            <p>Hypertension:</p>
+            <label>
+                <input type="radio" name="hypertension" value="1" required> Yes
+            </label>
+            <label>
+                <input type="radio" name="hypertension" value="0" required> No
+            </label>
+            <br><br>
+
+            <!-- Heart Disease Section -->
+            <p>Heart Disease:</p>
+            <label>
+                <input type="radio" name="heart_disease" value="1" required> Yes
+            </label>
+            <label>
+                <input type="radio" name="heart_disease" value="0" required> No
+            </label>
+            <br><br>
+
+            <!-- Ever Married Section -->
+            <p>Ever Married:</p>
+            <label>
+                <input type="radio" name="ever_married" value="1" required> Yes
+            </label>
+            <label>
+                 <input type="radio" name="ever_married" value="0" required> No
+            </label>
+            <br><br>
+
+            <!-- Work Type Section -->
+            <p>Work Type:</p>
+            <label>
+                <input type="radio" name="work_type" value="2" required> Private
+            </label>
+            <label>
+                <input type="radio" name="work_type" value="3" required> Self Employed
+            </label>
+            <label>
+                <input type="radio" name="work_type" value="0" required> Government Job
+            </label>
+            <label>
+                <input type="radio" name="work_type" value="4" required> Children
+            </label>
+            <label>
+                <input type="radio" name="work_type" value="1" required> Never Worked
+            </label>
+            <br><br>
+
+            <!-- Residence Type Section -->
+            <p>Residence Type:</p>
+            <label>
+                <input type="radio" name="Residence_type" value="1" required> Rural
+            </label>
+            <label>
+                <input type="radio" name="Residence_type" value="0" required> Urban
+            </label>
+            <br><br>
+
+            <!-- Glucose Level Section -->
+            <p>Glucose Level:</p>
+             <input type="number" name="avg_glucose_level" step="any" required placeholder="Enter your glucose level">
+            <br><br>
+
+            <!-- BMI Section -->
+            <p>BMI:</p>
+            <input type="number" name="bmi" step="any" required placeholder="Enter your BMI">
+            <br><br>
+
+            <!-- Smoking Status Section -->
+            <p>Smoking Status:</p>
+            <label>
+                <input type="radio" name="smoking_status" value="1" required> Formerly Smoked
+            </label>
+            <label>
+                <input type="radio" name="smoking_status" value="2" required> Never Smoked
+            </label>
+            <label>
+                <input type="radio" name="smoking_status" value="0" required> Unknown
+            </label>
+            <label>
+                <input type="radio" name="smoking_status" value="3" required> Smoker
+            </label>
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

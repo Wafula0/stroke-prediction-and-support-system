@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction and Support System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .section-title {
+            font-size: 1.8em;
+            color: #4CAF50;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .card {
+            background-color: #e2f4e4;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            font-size: 1.5em;
+            color: #4CAF50;
+        }
+        .footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            alert("{{results}}");
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    Stroke Prediction and Support System
+</header>
+
+<div class="container">
+    <section class="intro-section">
+        <h2 class="section-title">Welcome to the Stroke Prediction and Support System</h2>
+        <div class="content">
+            <p>Stroke is a serious medical condition that requires immediate attention. This system helps you predict the likelihood of a stroke based on various health parameters. It also provides useful information about stroke, including its symptoms, risk factors, and preventive measures. Stay informed and take proactive steps to safeguard your health.</p>
+        </div>
+    </section>
+
+    <section class="about-stroke-section">
+        <h2 class="section-title">What is a Stroke?</h2>
+        <div class="content">
+            <p>A stroke occurs when the blood supply to part of the brain is interrupted, either by a blocked artery (ischemic stroke) or the rupture of a blood vessel (hemorrhagic stroke). The lack of blood flow can cause brain cells to die, leading to lasting brain damage or even death. Timely treatment is crucial in minimizing the damage caused by a stroke.</p>
+        </div>
+    </section>
+
+    <section class="symptoms-section">
+        <h2 class="section-title">Signs and Symptoms</h2>
+        <div class="content">
+            <p>Common signs of a stroke include:</p>
+            <ul>
+                <li>Sudden numbness or weakness in the face, arm, or leg (especially on one side of the body)</li>
+                <li>Confusion, trouble speaking, or understanding speech</li>
+                <li>Trouble seeing in one or both eyes</li>
+                <li>Difficulty walking, dizziness, loss of balance, or coordination</li>
+                <li>Severe headache with no known cause</li>
+            </ul>
+            <p>If you experience any of these symptoms, seek immediate medical attention!</p>
+        </div>
+    </section>
+
+    <section class="risk-factors-section">
+        <h2 class="section-title">Risk Factors</h2>
+        <div class="content">
+            <p>Several factors can increase your risk of having a stroke. These include:</p>
+            <ul>
+                <li>High blood pressure</li>
+                <li>Diabetes</li>
+                <li>Smoking</li>
+                <li>High cholesterol</li>
+                <li>Heart disease</li>
+                <li>Obesity and lack of physical activity</li>
+                <li>Excessive alcohol consumption</li>
+                <li>Age, gender, and family history</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="prevention-section">
+        <h2 class="section-title">Preventing a Stroke</h2>
+        <div class="content">
+            <p>There are steps you can take to reduce your risk of having a stroke, such as:</p>
+            <ul>
+                <li>Control your blood pressure</li>
+                <li>Maintain a healthy diet rich in fruits and vegetables</li>
+                <li>Exercise regularly</li>
+                <li>Quit smoking</li>
+                <li>Limit alcohol intake</li>
+                <li>Manage stress</li>
+                <li>Monitor cholesterol levels and control diabetes</li>
+            </ul>
+            <p>Making these lifestyle changes can significantly lower your chances of experiencing a stroke.</p>
+        </div>
+    </section>
+
+    <section class="support-section">
+        <h2 class="section-title">Support and Resources</h2>
+        <div class="content">
+            <p>Our system provides not only predictions but also support and resources for stroke survivors and their families. Some resources you can access include:</p>
+            <div class="card">
+                <div class="card-header">Stroke AI chatbot</div>
+                <p><a href="{%url 'cbt'%}">chat with Tstroke,an Ai chatbot</a></p>
+            </div>
+            <div class="card">
+                <div class="card-header">group chat web application </div>
+                <p><a href="{%url 'home'%}">chat with others on issues regarding stroke</a></p>
+            </div>
+            <!--<div class="card">
+                <div class="card-header">Financial and Legal Aid</div>
+                <p>Learn about financial assistance programs and legal resources to help with medical bills and long-term care planning.</p>
+            </div>-->
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="section-title">predict likelihood of gettin stroke</h2>
+        <div class="content" style="text-align: center;">
+            <a href="{%url 'predict'%}" class="cta-button">Start Prediction Now</a>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 Stroke Prediction and Support System | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

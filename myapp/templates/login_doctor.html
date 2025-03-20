@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #333;
+            margin-top: 50px;
+        }
+
+        h4 {
+            color: red;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+         .container h3 {
+            color: #555;
+            font-size: 1.2em;
+        }
+
+        .container input[type="text"], 
+        .container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1.1em;
+            box-sizing: border-box;
+        }
+
+        .container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .container input[type="text"]:focus, 
+        .container input[type="password"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Login Here, Doctor!</h1> 
+
+    <div class="container">
+        {% for message in messages %}
+            <h4>{{ message }}</h4>
+        {% endfor %}
+
+        <form action="login_doctor" method="POST">
+            {% csrf_token %}
+                <div class="form-group">
+                <h3>Username:</h3>
+                <input type="text" name="username" placeholder="Enter your username" required>
+            </div>
+
+            <div class="form-group">
+                <h3>Password:</h3>
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+</body>
+</html>
