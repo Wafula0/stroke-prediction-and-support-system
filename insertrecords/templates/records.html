@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Medical Records</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Hypertension</th>
+            <th>Heart Disease</th>
+            <th>Marital Status</th>
+            <th>Work Type</th>
+            <th>Residence Type</th>
+            <th>Glucose Level</th>
+            <th>BMI</th>
+            <th>Smoking Status</th>
+            <th>Stroke Status</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.id }}</td>
+            <td>{{ record.Gender }}</td>
+            <td>{{ record.Age }}</td>
+            <td>{{ record.Hypertension }}</td>
+            <td>{{ record.Heartdisease }}</td>
+            <td>{{ record.Evermarried }}</td>
+            <td>{{ record.Worktype }}</td>
+            <td>{{ record.Residencetype }}</td>
+            <td>{{ record.Glucoselevel }}</td>
+            <td>{{ record.Bmi }}</td>
+            <td>{{ record.Smokingstate }}</td>
+            <td>{{ record.Strokestatus }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

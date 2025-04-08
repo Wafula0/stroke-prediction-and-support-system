@@ -17,24 +17,7 @@
         "responses": ["There are three main types of stroke:\n1. **Ischemic stroke** - Caused by blocked arteries.\n2. **Hemorrhagic stroke** - Caused by bleeding in the brain.\n3. **Transient Ischemic Attack (TIA)** - A temporary stroke warning sign."],
         "context": [""]
     },
-    {
-        "tag":"Ischemic stroke",
-        "patterns":["what is ischemic stroke","ischemic stroke"],
-        "responses":["This is the most common type of stroke ,accounting for about 87% of all strokes. It occurs when a blood clot blocks or narrows an artery leading to the brain restricting blood flow. Causes include blood clot formed in the heart or other blood vessels (thrombotic or embotic stroke)."],
-        "context":[""]
-    },
-    {
-        "tag":"hemorrhagic stroke",
-        "patterns":["what is hemorrhagic stroke","hemorrhagic stroke"],
-        "responses":["This type happens when a blood vessel in the brain bursts, leading to bleeding in or around the brain. Causes include high blood pressure, aneurysms, and blood vessel malformations."],
-        "context":[""]
-    },
-    {
-        "tag":"TIA",
-        "patterns":["what is Transient Ischemic Attack","Transient Ischemic attack","TIA","what is TIA"],
-        "responses":["Often called 'mini-stroke', TIA is a temporary blockage of blood flow to the brain. It causes stroke-like symptoms but doesnt result in permanent damage. It is a warning sign of a possible major stroke."],
-        "context":[""]
-    },
+   
     {
         "tag": "symptoms",
         "patterns": ["what are the symptoms of stroke", "how do I know if someone is having a stroke", "stroke symptoms"],
@@ -49,25 +32,25 @@
     },
     {
         "tag": "diagnosis",
-        "patterns": ["how is stroke diagnosed", "stroke diagnosis", "tests for stroke"],
+        "patterns": ["how is stroke diagnosed", "stroke diagnosis", "diagnosis","tests for stroke"],
         "responses": ["Diagnosis includes:\n- **CT Scan or MRI** to check for brain damage\n- **Blood tests** to check for clotting issues\n- **Carotid ultrasound** to see artery blockages"],
         "context": [""]
     },
     {
         "tag": "prevention",
-        "patterns": ["how can I prevent stroke", "stroke prevention", "ways to avoid stroke"],
+        "patterns": ["how can I prevent stroke", "stroke prevention", "ways to avoid stroke","prevention"],
         "responses": ["Ways to prevent stroke:\n- Control blood pressure\n- Eat a healthy diet\n- Exercise regularly\n- Avoid smoking and excessive alcohol"],
         "context": [""]
     },
     {
         "tag": "treatment",
-        "patterns": ["how is stroke treated", "stroke treatment", "what are the treatments for stroke"],
+        "patterns": ["how is stroke treated", "stroke treatment", "what are the treatments for stroke","treatment"],
         "responses": ["Treatment depends on the type:\n- **Ischemic stroke**: Clot-busting drugs or mechanical clot removal\n- **Hemorrhagic stroke**: Surgery or controlling bleeding"],
         "context": [""]
     },
     {
         "tag": "recovery",
-        "patterns": ["how long does it take to recover from stroke", "stroke recovery time", "can someone fully recover from stroke"],
+        "patterns": ["how long does it take to recover from stroke", "stroke recovery time", "can someone fully recover from stroke","recovery period"],
         "responses": ["Recovery time varies. Some recover in weeks, others take months or years. Rehabilitation therapies like physical, speech, and occupational therapy help."],
         "context": [""]
     },
@@ -121,7 +104,7 @@
     },
     {
         "tag": "stroke_myths",
-        "patterns": ["common myths about stroke", "stroke misconceptions"],
+        "patterns": ["common myths about stroke", "stroke misconceptions","myths on steke"],
         "responses": ["Here are some common myths about stroke:\n- **Myth**: Only old people get strokes. **Truth**: Strokes can happen at any age.\n- **Myth**: Strokes aren't preventable. **Truth**: Many strokes can be prevented with lifestyle changes."],
         "context": [""]
     },

@@ -1,3 +1,4 @@
+import os
 """
 Django settings for chatbot project.
 
@@ -9,6 +10,12 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+ENCRYPTION_KEY=os.environ.get("DJANGO_ENCRYPTION_KEY")
 
 from pathlib import Path
 
@@ -80,8 +87,12 @@ WSGI_APPLICATION = 'chatbot.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+         'NAME':'strokeproject',
+        'USER':'root',
+        'PASSWORD':'nim001rod',
+        'HOST':'127.0.0.1',
+        'PORT':'3305',
     }
 }
 
@@ -120,9 +131,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIR=(
+    os.path.join(BASE_DIR,'static'),
+)

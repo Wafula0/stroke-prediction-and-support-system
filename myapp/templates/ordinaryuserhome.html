@@ -1,11 +1,13 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
+   
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome - Your Health System</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{%static 'style.css'%}">
     
     <style>
         /* Reset some default styles */
@@ -117,6 +119,7 @@ footer {
     <main>
         <div class="container">
             <h1>What would you like to do today?</h1>
+            <h4>hi</h4>
             <div class="options"><div class="option">
                     <a href="{%url 'cbt'%}">
                         <button class="option-btn">Charting with Chatbot</button>
