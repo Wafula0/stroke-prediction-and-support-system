@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'chatbot.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-         'NAME':'strokeproject',
+        'NAME':'strokeproject',
         'USER':'root',
         'PASSWORD':'nim001rod',
         'HOST':'127.0.0.1',

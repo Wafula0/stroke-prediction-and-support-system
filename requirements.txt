@@ -1,0 +1,7 @@
+numpy
+tensorflow
+nltk
+keras
+joblib
+python-dotenv
+cryptography
