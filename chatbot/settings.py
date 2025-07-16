@@ -87,12 +87,15 @@ WSGI_APPLICATION = 'chatbot.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'strokeproject',
-        'USER':'root',
-        'PASSWORD':'nim001rod',
-        'HOST':'127.0.0.1',
-        'PORT':'3305',
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME':'strokeproject',
+        #'USER':'root',
+        #'PASSWORD':'nim001rod',
+        #'HOST':'127.0.0.1',
+        #'PORT':'3305',
+
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
