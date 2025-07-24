@@ -5,3 +5,4 @@ keras
 joblib
 python-dotenv
 cryptography
+django
