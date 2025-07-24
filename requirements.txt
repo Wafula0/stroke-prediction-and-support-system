@@ -4,4 +4,4 @@ nltk
 keras
 joblib
 python-dotenv
-cryptographygit 
+cryptography
