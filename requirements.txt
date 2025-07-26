@@ -6,3 +6,4 @@ joblib
 python-dotenv
 cryptography
 django
+gunicorn
