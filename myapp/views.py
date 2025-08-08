@@ -31,10 +31,10 @@ def register_ordinary_user(request):
         if password==password2:
             if User.objects.filter(email=email).exists():
                messages.info(request, 'Email Already Used')
-               return redirect('register')
+               return redirect('register_ordinary_user')
             elif User.objects.filter(username=username).exists():
                 messages.info(request, 'Username already exists!')
-                return redirect('register')
+                return redirect('register_ordnary_user')
             else:
                 user=User.objects.create_user(username=username,email=email,password=password)
                 user.country=country
@@ -50,7 +50,7 @@ def register_ordinary_user(request):
         
 
      
-    return render(request,'register.html')
+    return render(request,'register_ordinary_doctor.html')
 
 def login_ordinary_user(request):
     if request.method=='POST':
@@ -84,10 +84,10 @@ def register_doctor(request):
         if password==password2:
             if User.objects.filter(email=email).exists():
                messages.info(request, 'Email Already Used')
-               return redirect('register')
+               return redirect('register_doctor')
             elif User.objects.filter(username=username).exists():
                 messages.info(request, 'Username already exists!')
-                return redirect('register')
+                return redirect('register_doctor')
             else:
                 myuser=User.objects.create_user(username=username,email=email,password=password)
                 myuser.country=country
@@ -96,7 +96,7 @@ def register_doctor(request):
                 return redirect('login_doctor')
         else:
             messages.info(request, "password Not the same")
-            return redirect('register')
+            return redirect('register_doctor')
     else:
         return render(request,'register_doctor.html')
 
