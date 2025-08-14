@@ -1,7 +1,7 @@
 numpy==1.23.5
 tensorflow==2.14.0
 nltk
-keras
+keras==2.14.0
 joblib
 python-dotenv
 cryptography
